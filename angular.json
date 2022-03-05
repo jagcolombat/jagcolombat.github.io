@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "euro-jackpot": "apps/euro-jackpot",
+    "euro-jackpot-e2e": "apps/euro-jackpot-e2e"
+  }
+}
