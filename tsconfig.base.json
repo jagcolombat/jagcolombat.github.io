@@ -18,6 +18,9 @@
       "@lottoland/euro-jackpot/layout": [
         "libs/euro-jackpot/layout/src/index.ts"
       ],
+      "@lottoland/euro-jackpot/results": [
+        "libs/euro-jackpot/results/src/index.ts"
+      ],
       "@lottoland/ui": ["libs/ui/src/index.ts"]
     }
   },
