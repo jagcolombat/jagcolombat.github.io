@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/euro-jackpot/layout",
+  "sourceRoot": "libs/euro-jackpot/layout/src",
+  "prefix": "lottoland",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/euro-jackpot/layout"],
+      "options": {
+        "jestConfig": "libs/euro-jackpot/layout/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/euro-jackpot/layout/src/**/*.ts",
+          "libs/euro-jackpot/layout/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

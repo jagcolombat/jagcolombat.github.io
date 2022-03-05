@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@lottoland/euro-jackpot/layout": [
+        "libs/euro-jackpot/layout/src/index.ts"
+      ],
       "@lottoland/ui": ["libs/ui/src/index.ts"]
     }
   },
