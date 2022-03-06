@@ -1,0 +1,9 @@
+{
+    "/api": {
+        "target": "https://media.lottoland.com",
+        "secure": false,
+        "headers": {
+            "host": "media.lottoland.com"
+        }
+    }
+}
