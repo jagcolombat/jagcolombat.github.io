@@ -15,13 +15,18 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@lottoland/api-rest": ["libs/api-rest/src/index.ts"],
+      "@lottoland/euro-jackpot/data-access": [
+        "libs/euro-jackpot/data-access/src/index.ts"
+      ],
       "@lottoland/euro-jackpot/layout": [
         "libs/euro-jackpot/layout/src/index.ts"
       ],
       "@lottoland/euro-jackpot/results": [
         "libs/euro-jackpot/results/src/index.ts"
       ],
-      "@lottoland/ui": ["libs/ui/src/index.ts"]
+      "@lottoland/ui": ["libs/ui/src/index.ts"],
+      "@lottoland/euro-jackpot-env/*": ["apps/euro-jackpot/src/environments/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

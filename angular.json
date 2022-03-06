@@ -1,7 +1,9 @@
 {
   "version": 2,
   "projects": {
+    "api-rest": "libs/api-rest",
     "euro-jackpot": "apps/euro-jackpot",
+    "euro-jackpot-data-access": "libs/euro-jackpot/data-access",
     "euro-jackpot-e2e": "apps/euro-jackpot-e2e",
     "euro-jackpot-layout": "libs/euro-jackpot/layout",
     "euro-jackpot-results": "libs/euro-jackpot/results",

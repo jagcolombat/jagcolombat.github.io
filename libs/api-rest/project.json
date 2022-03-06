@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/api-rest",
+  "sourceRoot": "libs/api-rest/src",
+  "prefix": "lottoland",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api-rest"],
+      "options": {
+        "jestConfig": "libs/api-rest/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/api-rest/src/**/*.ts",
+          "libs/api-rest/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
