@@ -7,6 +7,7 @@
     "euro-jackpot-e2e": "apps/euro-jackpot-e2e",
     "euro-jackpot-layout": "libs/euro-jackpot/layout",
     "euro-jackpot-results": "libs/euro-jackpot/results",
-    "ui": "libs/ui"
+    "ui": "libs/ui",
+    "utils": "libs/utils"
   }
 }
