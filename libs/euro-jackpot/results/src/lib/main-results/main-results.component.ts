@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { EurojackpotDataAccessService } from 'libs/euro-jackpot/data-access/src/lib/services/entities/eurojackpot-data-access.service';
-
+import { IResultItem } from '@lottoland/utils';
+import { getResultItem } from '@lottoland/utils';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'lottoland-main-results',
   templateUrl: './main-results.component.html',
@@ -10,14 +11,25 @@ import { EurojackpotDataAccessService } from 'libs/euro-jackpot/data-access/src/
 export class MainResultsComponent implements OnInit {
 
   title = "Eurojackpot results & Winning numbers";
+  numbers?: number[]; 
+  euroNumbers?: number[]; 
+  resultItems?: IResultItem[];
   
-  constructor(private euroData: EurojackpotDataAccessService) { }
+  constructor(public route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.euroData.getResults().subscribe({
-      next: (value) => console.log('results', value),
+    this.route.data.subscribe({
+      next: (value) => {
+        console.log('results', value);
+        const last = value['results'].last;
+        this.numbers = [...last.numbers];
+        this.euroNumbers = [...last.euroNumbers];
+    
+        this.resultItems = Object.entries(last.odds).map(v => getResultItem(v)) ;
+        console.log(this.resultItems);
+      },
       error: (err) => console.error('results error', err)
-    })
+    });
   }
 
 }

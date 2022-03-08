@@ -3,3 +3,17 @@
     flex-direction: column;
     padding: 10px 20px;
 }
+
+.even {
+    background-color: #e9ecef;
+}
+
+lottoland-result-item {
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+}
+
+lottoland-result-item:first-of-type {
+    border-top: 1px solid lightgrey;
+}
