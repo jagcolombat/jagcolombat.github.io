@@ -5,10 +5,10 @@
     </div>
     <div class="d-flex flex-row">
         <b class="w-50">Match</b>
-        <label class="w-50">{{resultItem?.match}}</label>
+        <label class="w-50" style="flex-wrap: wrap">{{resultItem?.match}}</label>
     </div><div class="d-flex flex-row">         
         <b class="w-50">Winner numbers</b>
-        <label class="w-50">{{resultItem?.winners | number}}</label>
+        <label class="w-50">{{resultItem?.winners | number}}x</label>
     </div><div class="d-flex flex-row">
         <b class="w-50">Amount</b>
         <label class="w-50">{{resultItem?.amount | currency:'EUR'}}</label>

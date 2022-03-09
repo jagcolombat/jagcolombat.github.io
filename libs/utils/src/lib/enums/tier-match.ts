@@ -14,16 +14,16 @@ export enum TierMatchEnum {
 }
 
 export const ETierMatch = {
-    "rank1": "5+2",
-    "rank2": "5+1",
-    "rank3": "5+0",
-    "rank4": "4+2",
-    "rank5": "4+1",
-    "rank6": "4+0",
-    "rank7": "3+2",
-    "rank8": "2+2",
-    "rank9": "3+1",
-    "rank10": "3+0",
-    "rank11": "1+2",
-    "rank12": "2+1",
+    "rank1": "5 Numbers + 2 Euronumbers",
+    "rank2": "5 Numbers + 1 Euronumbers",
+    "rank3": "5 Numbers + 0 Euronumbers",
+    "rank4": "4 Numbers + 2 Euronumbers",
+    "rank5": "4 Numbers + 1 Euronumbers",
+    "rank6": "4 Numbers + 0 Euronumbers",
+    "rank7": "3 Numbers + 2 Euronumbers",
+    "rank8": "2 Numbers + 2 Euronumbers",
+    "rank9": "3 Numbers + 1 Euronumbers",
+    "rank10": "3 Numbers + 0 Euronumbers",
+    "rank11": "1 Numbers + 2 Euronumbers",
+    "rank12": "2 Numbers + 1 Euronumbers",
 }
