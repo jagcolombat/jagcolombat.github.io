@@ -1,5 +1,9 @@
-<div class="d-flex flex-row">
-    <span class="m-1" *ngFor="let i of numbers">{{i}}</span>
-    <label> + </label>
-    <span class="m-1 red" *ngFor="let j of redNumbers">{{j}}</span>
+<div class="d-flex flex-row winners">
+    <div class="d-flex flex-row numbers">
+        <span class="m-1" *ngFor="let i of numbers">{{i}}</span>
+        <label> + </label>
+    </div>
+    <div class="d-flex flex-row euro-numbers">
+        <span class="m-1" *ngFor="let j of redNumbers">{{j}}</span>
+    </div>
 </div>
