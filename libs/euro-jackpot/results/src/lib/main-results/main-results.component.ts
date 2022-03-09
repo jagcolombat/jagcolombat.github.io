@@ -25,7 +25,7 @@ export class MainResultsComponent implements OnInit {
         this.numbers = [...last.numbers];
         this.euroNumbers = [...last.euroNumbers];
     
-        this.resultItems = Object.entries(last.odds).map(v => getResultItem(v)) ;
+        this.resultItems = Object.entries(last.odds).filter(v => v[0] !== 'rank0').map(v => getResultItem(v)) ;
         console.log(this.resultItems);
       },
       error: (err) => console.error('results error', err)
