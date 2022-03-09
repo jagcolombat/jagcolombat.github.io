@@ -1,3 +1,9 @@
+@import "../../assets/variables.scss";
+
+.winners{
+    flex-wrap: wrap;
+}
+
 span {
     display: flex;
     justify-content: center;
@@ -8,8 +14,8 @@ span {
     height: 40px;
 }
 
-.red {
-    border-color: #ef2640b8 !important;
+.euro-numbers span {
+    border-color: $lottery-primary !important;
 }
 
 label {
