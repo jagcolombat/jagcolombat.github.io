@@ -12,6 +12,14 @@ This project was built using [Angular](https://angular.io) and [Nx](https://nx.d
 
 # Quick Start
 
+## Browse to the application
+
+The application is hosted using Github Pages, and it can be visited in the URL:
+
+[https://jagcolombat.github.io/](https://jagcolombat.github.io/)
+
+<img src="apps/euro-jackpot/src/assets/ng+githubpages.png" width="300">
+
 ## Run the application:
 
 ### With Docker:
