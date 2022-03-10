@@ -20,9 +20,25 @@ The application is hosted using Github Pages, and it can be visited in the URL:
 
 <img src="apps/euro-jackpot/src/assets/ng+githubpages.png" width="300">
 
-## Run the application:
+## Restricted by cross-domain 
 
-### With Docker:
+If the application show a restriction by Cross-domain, feel free to use any solution to jump this restriction.
+
+### Here there is one solution:
+
+If you are in Windows OS and have installed Chrome browser, do it.
+
+Open your chrome with this configuration:
+
+- `chrome.exe  --user-data-dir="C://Chrome dev session" -disable-web-security`
+
+You can run it "Run Window" (Win + R)
+
+When the Chrome is opened, set the URL [https://jagcolombat.github.io/](https://jagcolombat.github.io/)
+
+# Run the application locally:
+
+## With Docker:
 
 <img src="apps/euro-jackpot/src/assets/docker1.png" width="300">
 
@@ -38,7 +54,7 @@ First, make sure you have Docker installed in your system.
 4. Finally open your browser and navigate to [http://localhost:8080](http://localhost:8080)
 
 
-### Without Docker:
+## Without Docker:
 
 <img src="apps/euro-jackpot/src/assets/node+npm.png" width="300">
 
