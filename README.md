@@ -1,105 +1,92 @@
 
 
-# Lottoland
+# Lottoland - EuroJackpot
 
-This project was generated using [Nx](https://nx.dev).
+This project is a web application that let to user know the latest results of EuroJackpot lottery.
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+<div style="text-align: center;">
+  <img src="apps/euro-jackpot/src/assets/results-grid.png" width="600"/>
+</div>
 
-🔎 **Smart, Fast and Extensible Build System**
+This project was built using [Angular](https://angular.io) and [Nx](https://nx.dev), to enhance the productivity in Angular ecosystem.
 
-## Quick Start & Documentation
+# Quick Start
 
-[Nx Documentation](https://nx.dev/angular)
+## Run the application:
 
-[10-minute video showing all Nx features](https://nx.dev/getting-started/intro)
+### With Docker:
 
-[Interactive Tutorial](https://nx.dev/tutorial/01-create-application)
+<img src="apps/euro-jackpot/src/assets/docker1.png" width="300">
 
-## Adding capabilities to your workspace
+First, make sure you have Docker installed in your system.
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+1. Clone this repo
+2. Move inside root directory and execute this command to build the docker image:
+- `docker build -t lottoland/eurojackpot-results-image:latest`  .
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+3. If all was succesfully, run the built image with this other command:
+- `docker run -d -p 8080:80 lottoland/eurojackpot-results-image:latest`
 
-Below are our core plugins:
-
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
-
-There are also many [community plugins](https://nx.dev/community) you could add.
-
-## Generate an application
-
-Run `ng g @nrwl/angular:app my-app` to generate an application.
-
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
-
-## Generate a library
-
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are shareable across libraries and applications. They can be imported from `@lottoland/mylib`.
-
-## Development server
-
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng g component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+4. Finally open your browser and navigate to [http://localhost:8080](http://localhost:8080)
 
 
+### Without Docker:
+
+<img src="apps/euro-jackpot/src/assets/node+npm.png" width="300">
+
+First, make sure you have NodeJS 10 or superior and respective NPM installed in your system.
+
+1. Clone this repo
+2. Move inside root directory and execute this command
+- `npm install` 
+
+3. If all was succesfully, run the application with following command:
+- `npm run start`
+
+4. Finally open your browser and navigate to [http://localhost:4200](http://localhost:4200)
 
 
+# Architecture:
 
+<div style="text-align: center;">
+  <img src="apps/euro-jackpot/src/assets/ng+nx.jpg" width="300"/>
+</div>
 
-## ☁ Nx Cloud
+The application follow a architecture of monorepo and it is distributed in a Angular application and several Angular Libs.
 
-### Distributed Computation Caching & Distributed Task Execution
+Almost all bussiness concerns of the application are groups in the libraries, letting to reuse these in other posible applications, related to EuroJackpot or Lottoland.
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+<div style="text-align: center;"><img src="apps/euro-jackpot/src/assets/graph.png" width="600"></div>
 
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+- App: EuroJackpot
 
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+  - AppComponent: Entry point of aplication, load main component for EuroJackpot layout
+  - Routing: The aplication has a one route which load in lazy mode EuroJackpot reults library
 
-Visit [Nx Cloud](https://nx.app/) to learn more.
+- Libs: 
+  - EuroJackpot:
+	  - Layout: 
+		  - MainLayout: Define the generic layout
+		  - EuroJackpotLayout: Based in MainLayout orchest the pieces of code (header, router-outlet) that must be in the main layout.
+	  - DataAccess: Services for retrieve Eurojackpot data (consuming endpoint)
+	  - Results: Orchest the flow for get, transform and present the lottery results, by a container component and service resolver
+  - ApiRest: Generic service for consuming REST APIs
+  - UI: Atomic components for represent data
+  
+      Winner numbers, Result item, Result grid, Result date
+  - Utils:
+    - Enums: Enumeratives for tier and match values
+	- Models: Classes and interfaces of base structures
+	- Services: Helper services like loading indicator
+	- Functions: Helper functions for transform data
+
+- Third party libraries:
+    Also of Angular and Narwhal libraries, this application use other important third party libraries like Bootstrap, Angular Flex Layout and NgxSpinner
+	
+Contact:
+
+Any suggestion or doubts please contact me using this accounts.
+
+- E-mail: jagcolombat@gmail.com
+- GitHub: [@jagcolombat](https://github.com/jagcolombat)
+
