@@ -4,18 +4,24 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { EuroJackpotResultsModule } from '@lottoland/euro-jackpot/results';
+import { EuroJackpotLayoutComponent } from './components/euro-jackpot-layout/euro-jackpot-layout.component';
+import { RouterModule } from '@angular/router';
+import { UiModule } from '@lottoland/ui';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
-  imports: [CommonModule, EuroJackpotResultsModule],
+  imports: [CommonModule, RouterModule, NgxSpinnerModule, EuroJackpotResultsModule],
   declarations: [
     MainLayoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    EuroJackpotLayoutComponent
   ],
   exports: [
     MainLayoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    EuroJackpotLayoutComponent
   ],
 })
 export class EuroJackpotLayoutModule {}
