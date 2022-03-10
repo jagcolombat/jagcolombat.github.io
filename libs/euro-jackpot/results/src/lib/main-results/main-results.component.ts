@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { IResultItem } from '@lottoland/utils';
+import { IResultItem, LoaderService } from '@lottoland/utils';
 import { getResultItem } from '@lottoland/utils';
 import { ActivatedRoute } from '@angular/router';
 @Component({
@@ -15,12 +15,12 @@ export class MainResultsComponent implements OnInit {
   euroNumbers?: number[]; 
   resultItems?: IResultItem[];
   
-  constructor(public route: ActivatedRoute) { }
+  constructor(public route: ActivatedRoute, private loaderServ: LoaderService) { }
 
   ngOnInit(): void {
     this.route.data.subscribe({
-      next: (value) => {
-        console.log('results', value);
+      next: (value) => {       
+        this.loaderServ.stopLoading();
         const last = value['results'].last;
         this.numbers = [...last.numbers];
         this.euroNumbers = [...last.euroNumbers];
@@ -28,7 +28,10 @@ export class MainResultsComponent implements OnInit {
         this.resultItems = Object.entries(last.odds).filter(v => v[0] !== 'rank0').map(v => getResultItem(v)) ;
         console.log(this.resultItems);
       },
-      error: (err) => console.error('results error', err)
+      error: (err) => {
+        console.error('results error', err);        
+        this.loaderServ.stopLoading();
+      }  
     });
   }
 
