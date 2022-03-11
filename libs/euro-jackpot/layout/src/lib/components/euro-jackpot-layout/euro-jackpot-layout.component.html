@@ -1,9 +1,12 @@
 <lottoland-main-layout>
-    <lottoland-header class="header w-100"></lottoland-header>
-    <content class="content d-flex flex-fill flex-column justify-content-center align-items-center">
+    <lottoland-header class="header w-100">
+        <!-- <a [routerLink]="'drawing-results'">Results</a> -->
+    </lottoland-header>
+    <content class="content d-flex flex-fill flex-column align-items-center">
         <router-outlet></router-outlet>
         <ngx-spinner type="ball-scale-multiple">
             <p style="font-size: 20px; color: white">Loading...</p>
         </ngx-spinner>
+        <div class="alert alert-danger" [ngClass]="{'visible': error, 'invisible': !error}">{{errMsg}}</div>
     </content>
 </lottoland-main-layout>
