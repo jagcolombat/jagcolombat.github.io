@@ -3,15 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { EuroJackpotLayoutModule } from '@lottoland/euro-jackpot/layout';
-import { NgxSpinnerModule } from 'ngx-spinner';
 import { AppComponent } from './app.component';
 import { UtilsModule } from '@lottoland/utils';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule, 
-    BrowserAnimationsModule,
+    BrowserAnimationsModule, 
+    RouterModule,
     AppRoutingModule,
     EuroJackpotLayoutModule,
     UtilsModule

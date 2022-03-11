@@ -8,7 +8,7 @@ import { ResultsResolver } from './services/results-resolver.service';
 import { EuroJackpotDataAccessModule } from '@lottoland/euro-jackpot/data-access';
 
 const routes: Routes = [
-  { path: "", component: MainResultsComponent, resolve: { results: ResultsResolver }},
+  { path: "", component: MainResultsComponent , resolve: { results: ResultsResolver } },
   {path: "**", redirectTo: ""}
 ];
 
