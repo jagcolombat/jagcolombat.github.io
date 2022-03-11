@@ -3,10 +3,9 @@ import {RouterModule, Routes} from "@angular/router";
 
 const routes: Routes = [
     {
-        path: "drawing-results", loadChildren: () => import("@lottoland/euro-jackpot/results").then(m => m.EuroJackpotResultsModule),
+        path: "euro-jackpot", loadChildren: () => import("@lottoland/euro-jackpot/layout").then(m => m.EuroJackpotLayoutModule),
     },
-    {path: "", pathMatch: "full", redirectTo: "drawing-results"},
-    {path: "**", redirectTo: ""}
+    {path: "", pathMatch: "full", redirectTo: "euro-jackpot"}
 ];
 @NgModule({
     declarations: [],
