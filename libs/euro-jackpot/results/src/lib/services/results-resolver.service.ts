@@ -10,8 +10,7 @@ export class ResultsResolver implements Resolve<any> {
     }
 
     resolve(): Observable<any> | Promise<any> | any {
-        // return this.euroDataServ.getResults();
-        return this.euroDataServ.requestResults();
+        return this.euroDataServ.getResults();
     }
 
 }
