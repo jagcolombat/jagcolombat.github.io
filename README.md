@@ -5,7 +5,7 @@
 This project is a web application that let to user know the latest results of EuroJackpot lottery.
 
 <div style="text-align: center;">
-  <img src="apps/euro-jackpot/src/assets/results-grid.png" width="600"/>
+  <img src="apps/euro-jackpot/src/assets/results-grid.PNG" alt="EuroJackpot Results - Preview" width="600"/>
 </div>
 
 This project was built using [Angular](https://angular.io) and [Nx](https://nx.dev), to enhance the productivity in Angular ecosystem.
@@ -18,7 +18,7 @@ The application is hosted using Github Pages, and it can be visited in the URL:
 
 [https://jagcolombat.github.io/](https://jagcolombat.github.io/)
 
-<img src="apps/euro-jackpot/src/assets/ng+githubpages.png" width="300">
+<img src="apps/euro-jackpot/src/assets/ng+githubpages.png" alt="Angular + Github Pages" width="300">
 
 ## Restricted by cross-domain 
 
@@ -40,7 +40,7 @@ When the Chrome is opened, set the URL [https://jagcolombat.github.io/](https://
 
 ## With Docker:
 
-<img src="apps/euro-jackpot/src/assets/docker1.png" width="300">
+<img src="apps/euro-jackpot/src/assets/docker1.png" alt="Docker" width="300">
 
 First, make sure you have Docker installed in your system.
 
@@ -56,7 +56,7 @@ First, make sure you have Docker installed in your system.
 
 ## Without Docker:
 
-<img src="apps/euro-jackpot/src/assets/node+npm.png" width="300">
+<img src="apps/euro-jackpot/src/assets/node+npm.png" alt="Node + Npm" width="300">
 
 First, make sure you have NodeJS 10 or superior and respective NPM installed in your system.
 
@@ -73,14 +73,16 @@ First, make sure you have NodeJS 10 or superior and respective NPM installed in 
 # Architecture:
 
 <div style="text-align: center;">
-  <img src="apps/euro-jackpot/src/assets/ng+nx.jpg" width="300"/>
+  <img src="apps/euro-jackpot/src/assets/ng+nx.jpg" alt="Angular + Narwhal Nx" width="300"/>
 </div>
 
 The application follow a architecture of monorepo and it is distributed in a Angular application and several Angular Libs.
 
 Almost all bussiness concerns of the application are groups in the libraries, letting to reuse these in other posible applications, related to EuroJackpot or Lottoland.
 
-<div style="text-align: center;"><img src="apps/euro-jackpot/src/assets/graph.png" width="600"></div>
+<div style="text-align: center;">
+  <img src="apps/euro-jackpot/src/assets/graph.png" alt="EuroJackpot Results - Graph Dependencies" width="600">
+</div>
 
 - App: EuroJackpot
 
