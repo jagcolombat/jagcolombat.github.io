@@ -19,7 +19,7 @@ export class ErrorInterceptor implements HttpInterceptor {
          return next.handle(request).pipe(
             tap({ 
                 next: (_event: HttpEvent<any>) => {
-                    console.log("errorInterceptor", _event);
+                    console.log("errorInterceptor next", _event);
                  },
                 error: (error: any) => {
                     console.error("errorInterceptor", error);

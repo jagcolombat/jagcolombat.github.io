@@ -12,4 +12,8 @@ export class EurojackpotDataAccessService {
   getResults(): Observable<any> {
     return this.restService.get<any>('/drawings/euroJackpot/');
   }
+
+  requestResults(): Observable<any> {
+    return this.restService.request('/drawings/euroJackpot/');
+  }
 }

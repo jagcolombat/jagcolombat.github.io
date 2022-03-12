@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { defer, Observable} from 'rxjs';
 
 @Injectable()
 export class ApiRestService {
+
   constructor(private http: HttpClient) {}
 
   get<T>(url: string, params: HttpParams = new HttpParams()): Observable<T> {
@@ -11,6 +12,17 @@ export class ApiRestService {
       headers: this.headers,
       params,
     });
+  }
+
+  request(url: string): Observable<any> {
+      return defer(()=>{
+        return fetch(url)
+          .then(response => response.json())
+          .then(json => {
+            console.log(json);
+            return json;
+          })
+      });
   }
 
   post<T, D>(url: string, data: D): Observable<T> {

@@ -16,6 +16,8 @@ export class HandlerErrorService {
         errorMessage = "User unauthorized";
     } else if(error.status === 409) {
         errorMessage = error.error.message;;
+    } else if(error.status === 504) {
+      errorMessage = error.message;;
     } else if(error.status >= 500) {
         errorMessage = "Internal server error";
     } else if(error.status >= 400 || error.status === 0) {

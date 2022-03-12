@@ -13,6 +13,10 @@ export class EurojackpotApiRestService {
     return this.apiService.get<T>(`${environment.api_url}${url}`, params);
   }
 
+  request<T>(url: string): Observable<T> {
+    return this.apiService.request(`${environment.api_url}${url}`);
+  }
+
   post<T, D>(url: string, data: D): Observable<T> {
     return this.apiService.post(environment.api_url+url, data);
   }
