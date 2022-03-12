@@ -4,6 +4,7 @@ import { WinnerNumberComponent } from './components/winner-number/winner-number.
 import { ResultItemComponent } from './components/result-item/result-item.component';
 import { ResultGridComponent } from './components/result-grid/result-grid.component';
 import { ResultDateComponent } from './components/result-date/result-date.component';
+import { GenericMessageComponent } from './components/generic-message/generic-message.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -11,13 +12,15 @@ import { ResultDateComponent } from './components/result-date/result-date.compon
     WinnerNumberComponent,
     ResultItemComponent,
     ResultGridComponent,
-    ResultDateComponent
+    ResultDateComponent,
+    GenericMessageComponent,
   ],
   exports: [
     WinnerNumberComponent,
     ResultItemComponent,
     ResultGridComponent,
-    ResultDateComponent
+    ResultDateComponent,
+    GenericMessageComponent,
   ],
 })
 export class UiModule {}

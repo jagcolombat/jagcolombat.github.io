@@ -23,7 +23,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes), NgxSpinnerModule],
+  imports: [CommonModule, RouterModule.forChild(routes), NgxSpinnerModule, UiModule],
   declarations: [
     MainLayoutComponent,
     HeaderComponent,
