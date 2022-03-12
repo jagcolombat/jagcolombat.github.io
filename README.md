@@ -24,6 +24,8 @@ The application is hosted using Github Pages, and it can be visited in the URL:
 
 If the application show a restriction by Cross-domain, feel free to use any solution to jump this restriction.
 
+<img src="apps/euro-jackpot/src/assets/error-crossdomain-logs.png" alt="Cross-Domain Error">
+
 ### Here there is one solution:
 
 If you are in Windows OS and have installed Chrome browser, do it.
