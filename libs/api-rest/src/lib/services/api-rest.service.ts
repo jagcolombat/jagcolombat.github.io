@@ -46,7 +46,7 @@ export class ApiRestService {
     const headersConfig = {
       'Content-Type': 'application/json',
       Accept: 'application/json',
-      'Referrer-Policy': 'no-referrer'
+      'Referrer-Policy': 'no-referrer',
     };
 
     return new HttpHeaders(headersConfig);
