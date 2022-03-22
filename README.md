@@ -89,7 +89,7 @@ Almost all bussiness concerns of the application are groups in the libraries, le
 - App: EuroJackpot
 
   - AppComponent: Entry point of aplication, load main component for EuroJackpot layout
-  - Routing: The aplication has a one route which load in lazy mode EuroJackpot reults library
+  - Routing: The aplication has a one route which load in lazy mode EuroJackpot layout library
 
 - Libs: 
   - EuroJackpot:
